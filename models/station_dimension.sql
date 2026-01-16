@@ -5,11 +5,11 @@ distinct
 start_statio_id as station_id,
 start_station_name as station_name,
 start_lat as station_lat,
-start_lng as station_lng
+start_lng as start_station_lng
 
 from {{ ref('stg_bike') }}
 
-where RIDE_ID != 'ride_id'
+where RIDE_ID != 'bikeid'
 
 
 )
